@@ -21,8 +21,8 @@ t = pd.DataFrame(dataset, columns = ['recidivist'])
 plot = DecisionTreeClassifier(criterion = 'entropy').fit(d,t)
 ree = tree.plot_tree(plot, filled = True, feature_names=names, class_names = targetNames)
 plt.show()
-print("after tree")
-
+# print("after tree")
+# print(d,t)
 
 #Predict subquestion B
 print("Prediction for " + names[0] + ": False, " + names[1] + ": False, " + names[2]+ ": True:")

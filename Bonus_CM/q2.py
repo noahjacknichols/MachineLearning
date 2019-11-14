@@ -6,8 +6,7 @@ import matplotlib.pyplot as plt
 import scipy.stats
 import math
 
-names = ['AGE', 'EDUCATION', 'MARITAL STATUS', 'OCCUPATION', 'ANNUAL INCOME']
-dataset = pd.read_csv('q2.txt', names = names)
+
 def gini(labels):
     value, counts = np.unique(labels, return_counts=True)
     s = 0
@@ -39,6 +38,11 @@ def ent_IGR(labels, base=None):
     for count in counts:
         val += count/s * math.log(count/s,2)
     return -val
+
+
+
+names = ['AGE', 'EDUCATION', 'MARITAL STATUS', 'OCCUPATION', 'ANNUAL INCOME']
+dataset = pd.read_csv('q2.txt', names = names)
 
 
 data_Entropy = ent(pd.DataFrame(dataset, columns=[names[1]]),2)
